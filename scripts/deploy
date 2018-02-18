@@ -1,0 +1,5 @@
+#!/bin/bash
+# Usage: ./script/deploy
+
+echo 'Deploying the application...'
+git subtree push --prefix frontend heroku master
