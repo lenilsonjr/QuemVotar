@@ -35,7 +35,7 @@
 
 // POST /answers
 {
-  answers: [
+  [
      { id: 0, answer: 'string' },
      { id: 0, answer: 'string' }
   ]
@@ -44,9 +44,9 @@
 // POST /answers [response]
 [
   {
-      "name": "Unity",
-      "photo": "https://placehold.it/400x400.png",
-      "description": "Great, now I have to take over an entire planet because of your stupid boobs."
+    "name": "Unity",
+    "photo": "https://placehold.it/400x400.png",
+    "description": "Great, now I have to take over an entire planet because of your stupid boobs."
   }
 ]
 ```
