@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20180218020544) do
 
-  create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "answers", force: :cascade do |t|
     t.text "answers"
     t.integer "result_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "candidates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "candidates", force: :cascade do |t|
     t.string "name"
     t.string "photo"
     t.text "description"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20180218020544) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "characteristics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "candidate_id"
-    t.bigint "question_id"
+  create_table "characteristics", force: :cascade do |t|
+    t.integer "candidate_id"
+    t.integer "question_id"
     t.boolean "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,13 +37,11 @@ ActiveRecord::Schema.define(version: 20180218020544) do
     t.index ["question_id"], name: "index_characteristics_on_question_id"
   end
 
-  create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "questions", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "choices"
   end
 
-  add_foreign_key "characteristics", "candidates"
-  add_foreign_key "characteristics", "questions"
 end
