@@ -28,3 +28,14 @@
   ]
 }
 ```
+
+## Front-end Flow
+
+```
+GET /questions
+Storage questions
+Render question by question
+Storage answer by answer
+POST /answers
+Render candidates
+```
