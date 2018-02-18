@@ -9,5 +9,9 @@
     { "id": 6, "title": "question 7", "choices": ["choice 1", "choice 2"] },
     { "id": 7, "title": "question 8", "choices": ["choice 1", "choice 2"] },
     { "id": 8, "title": "question 9", "choices": ["choice 1", "choice 2"] }
+  ],
+
+  "candidates": [
+    { "name": "candidate", "photo": "image_url", "description": "description" }
   ]
 }
