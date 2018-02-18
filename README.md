@@ -23,8 +23,19 @@
 
 // POST /answers [response]
 {
-  [
-    { name: 'string', avatar: image, description: 'string' }
+  candidates: [
+    { name: 'string', avatar: 'string', description: 'string' }
   ]
 }
+```
+
+## Front-end Flow
+
+```
+GET /questions
+Storage questions
+Render question by question
+Storage answer by answer
+POST /answers
+Render candidates
 ```
