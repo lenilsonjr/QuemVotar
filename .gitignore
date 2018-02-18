@@ -1,0 +1,11 @@
+# Ignore bundler config.
+/api/.bundle
+
+# Ignore all logfiles and tempfiles.
+/api/log/*
+/api/tmp/*
+!/api/log/.keep
+!/api/tmp/.keep
+
+/api/.byebug_history
+/api/config/database.yml
