@@ -2,7 +2,7 @@ class AnswersController < ApplicationController
 
   def create
 
-    answers = JSON.parse(params[:answers].to_s).to_a
+    answers = JSON.parse(request.body.read).to_a
     @answer = Answer.new(
       answers: answers
     )
