@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "fakeapi": "json-server --watch fakeapi/db.json"
+    "fakeapi": "json-server --watch --port 3001 fakeapi/db.json"
   },
   "devDependencies": {
     "json-server": "^0.12.1"
