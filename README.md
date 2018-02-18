@@ -9,15 +9,27 @@
 [
   {
     "id": 1,
-    "title": "Pergunta Um"
+    "title": "Pergunta Um",
+    "choices": [
+      "Sim",
+      "Não"
+    ]
   },
   {
     "id": 2,
-    "title": "Pergunta Dois"
+    "title": "Pergunta Dois",
+    "choices": [
+      "Sim",
+      "Não"
+    ]
   },
   {
     "id": 3,
-    "title": "Pergunta Três"
+    "title": "Pergunta Três",
+    "choices": [
+      "Sim",
+      "Não"
+    ]
   }
 ]
 
