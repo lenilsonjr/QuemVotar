@@ -18,8 +18,10 @@ class AnswersController < ApplicationController
       @candidate = { name: 'Nulo', photo: 'https://placehold.it/400x400.png', description: 'Aparentemente você não compactua com nada disso e não tem outra opção a não ser votar nulo. Que sorte.' }
     else
       @candidate = Candidate.find(@candidate)
+      @answer.candidate = @candidate.first
     end
 
+    @answer.save
     render json: @candidate, except: [:created_at, :updated_at, :id]
   end
 

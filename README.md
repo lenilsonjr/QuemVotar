@@ -42,11 +42,13 @@
 }
 
 // POST /answers [response]
-{
-  candidates: [
-    { name: 'string', avatar: 'string', description: 'string' }
-  ]
-}
+[
+  {
+      "name": "Unity",
+      "photo": "https://placehold.it/400x400.png",
+      "description": "Great, now I have to take over an entire planet because of your stupid boobs."
+  }
+]
 ```
 
 ## Front-end Flow
