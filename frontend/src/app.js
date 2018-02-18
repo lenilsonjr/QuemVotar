@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const SETTINGS = { API_HOST: 'http://localhost:3001' }
+const SETTINGS = { API_HOST: 'http://localhost:3002' }
 
 class App extends Component  {
   state = {
@@ -27,7 +27,7 @@ class App extends Component  {
     const answer = e.target.value === '0' ? true : false
 
     this.setState({answers: [...this.state.answers, {id, answer}]})
-    this.setState({currentQuestion: this.state.questions[id + 1]})
+    this.setState({currentQuestion: this.state.questions[id]})
     this.setState({hasQuestions: this.state.hasQuestions - 1})
   }
 
