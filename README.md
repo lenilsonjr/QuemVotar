@@ -8,8 +8,8 @@
 // GET /questions
 {
   questions: [
-    { id: 0, question: 'string', choices: ['string', 'string', 'string'] },
-    { id: 0, question: 'string', choices: ['string', 'string', 'string'] }
+    { id: 1, question: 'string', choices: ['label for true', 'label for false'] },
+    { id: 2, question: 'string', choices: ['label for true', 'label for false'] }
   ]
 }
 
