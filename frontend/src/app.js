@@ -32,20 +32,16 @@ class App extends Component  {
   }
 
   sendAnswers () {
-    // fetch(`${SETTINGS.API_HOST}/answers`,
-    //   {
-    //     method: 'POST',
-    //     headers: { Content-Type: 'application/json', Accept: 'application/json' },
-    //     body: JSON.stringify(body)
-    //   }
-    // )
-    // .then()
-
-    this.setState({candidates: [{
-      name: 'candidate',
-      photo: 'http://fakeimg.pl/300',
-      description: 'description'
-    }]})
+    fetch(`${SETTINGS.API_HOST}/answers`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(this.state.answers)
+      }
+    )
+    .then(res => res.json())
+    .then(res => this.setState({candidates: res}))
+    .catch(err => {throw err})
 
     this.setState({showSendAnswersButton: false})
   }
@@ -89,19 +85,19 @@ class App extends Component  {
               </button>
             }
 
-            {candidates && candidates.map(candidate => (
-              <section key={candidate.name}>
+            {candidates &&
+              <section key={candidates.name}>
                 <figure>
                   <img
-                    src={candidate.photo}
+                    src={candidates.photo}
                     alt='Foto de um candidato à política no Brasil'
                   />
-                  <figcaption>{candidate.description}</figcaption>
+                  <figcaption>{candidates.description}</figcaption>
                 </figure>
 
-                <h2>{candidate.name}</h2>
+                <h2>{candidates.name}</h2>
               </section>
-            ))}
+            }
           </section>
         }
       </section>
