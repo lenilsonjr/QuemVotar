@@ -55,8 +55,16 @@ class App extends Component  {
     } = this.state
 
     return (
-      <section>
-        <h1>Quem Votar — Problemas para decidir seu voto?</h1>
+      <section className='survey'>
+        <h1 className='survey__title'>Quem Votar</h1>
+        <h2 className='survey__subtitle'>Problemas para decidir seu voto?</h2>
+
+        <p className='survey__description'>
+          Responda algumas perguntas simples e nós te ajudaremos a encontrar um
+          candidato.
+        </p>
+
+        <span className='brazil'>🇧🇷</span>
 
         {currentQuestion &&
           <form>
@@ -65,6 +73,7 @@ class App extends Component  {
 
               {currentQuestion.choices.map((choice, index) => (
                 <button
+                  className='survey__answer'
                   onClick={this.handleSubmit.bind(this)}
                   ref='answer'
                   key={index}
@@ -80,22 +89,29 @@ class App extends Component  {
         {!hasQuestions &&
           <section>
             {showSendAnswersButton &&
-              <button onClick={this.sendAnswers.bind(this)}>
+              <button
+                className='survey__response'
+                onClick={this.sendAnswers.bind(this)}
+              >
                 Em quem devo votar?
               </button>
             }
 
             {candidates &&
-              <section key={candidates.name}>
+              <section className='candidate' key={candidates.name}>
                 <figure>
                   <img
+                    className='candidate__photo'
                     src={candidates.photo}
                     alt='Foto de um candidato à política no Brasil'
                   />
-                  <figcaption>{candidates.description}</figcaption>
+
+                  <figcaption className='candidate__description'>
+                    {candidates.description}
+                  </figcaption>
                 </figure>
 
-                <h2>{candidates.name}</h2>
+                <h2 className='candidate__name'>{candidates.name}</h2>
               </section>
             }
           </section>

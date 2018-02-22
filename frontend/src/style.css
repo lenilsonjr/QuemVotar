@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  background-color: #FEE571;
+}
+
+img { max-width: 100%; }
+
+
+.brazil {
+  margin-top: 0;
+  font-size: 3em;
+}
+
+.survey__title {
+  margin-bottom: 0;
+  font-size: 2.5em;
+}
+
+.survey__subtitle {
+  margin-top: 5px;
+  font-size: 2em;
+}
+
+.survey__description { font-size: 1.5em; }
+
+.survey__answer,
+.survey__response {
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: 1px solid #fbd612;
+  cursor: pointer;
+}
+
+.survey__answer:hover,
+.survey__response:hover {
+  background-color: #efefef;
+}
+
+.survey__answer:nth-child(odd) { margin-left: 10px; }
+
+
+.candidate {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fbd612;
+}
+
+.candidate__photo { border: 3px solid #fff; }
+
+.candidate__description {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.candidate__name { font-size: 2.5em; }
+
+
+/* @media 768px */
+@media (min-width: 768px) {
+  .candidate {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .candidate__description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
