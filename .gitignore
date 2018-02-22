@@ -4,6 +4,7 @@
 # Ignore all logfiles and tempfiles.
 /api/log/*
 /api/tmp/*
+/api/config/deploy/production.rb
 !/api/log/.keep
 !/api/tmp/.keep
 
